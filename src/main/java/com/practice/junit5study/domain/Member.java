@@ -4,6 +4,8 @@ public class Member {
     Long id;
     String email;
 
+    public Member() {}
+
     public Member(Long id, String email){
         this.id = id;
         this.email = email;
