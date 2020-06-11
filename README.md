@@ -21,8 +21,8 @@
 
 * 4부터 사용하고 있는 자바의 리플렉션 기능 덕분에 5부터는 테스트 클래스와 메서드 모두 public으로 사용하지 않아도 된다.  
 
-* JUnit의 default lifecyle은 `PER_METHOD`이다.  
-    `PER_CLASS`로 사용하려면 테스트 클래스에 `@TestInstance(Lifecyle.PER_CLASS)`를 붙여주면 된다.  
+* JUnit의 default lifecycle은 `PER_METHOD`이다.  
+    `PER_CLASS`로 사용하려면 테스트 클래스에 `@TestInstance(Lifecycle.PER_CLASS)`를 붙여주면 된다.  
     `PER_CLASS`로 사용하면 `@BeforeAll`과 `@AfterAll` 메서드를 static으로 사용하지 않아도 된다.  
     * JVM 수준에서 `PER_CLASS`로 변경  
         ```
@@ -86,7 +86,7 @@
     ```  
     * `memberService.findById(ArgumentMatchers.anyLong())`를 첫 번째 호출했을 때는 `Optional.of(member)`를 반환하도록 가정  
     * 두 번째 호출했을 때는 `RuntimeException`이 발생하도록 가정  
-    * 세 번째 호출했을 때는 `Optional.empty()를 반환하도록 가정  
+    * 세 번째 호출했을 때는 `Optional.empty()`를 반환하도록 가정  
 
 
 * 메서드 호출 횟수 검사하기  
